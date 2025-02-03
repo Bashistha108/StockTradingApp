@@ -1,0 +1,223 @@
+/*
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 5;
+    padding:5;
+    background-color: #f0f2f5;
+    color: #333;
+    line-height: 1.6;
+}
+.container {
+    max-width: 90%;
+    margin: 40px 60px;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    position: relative;
+}
+header {
+    text-align: center;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 20px;
+}
+main {
+    padding: 20px;
+    text-align: center;
+}
+input[type="text"], button {
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    margin-top: 10px;
+}
+input[type="text"] {
+    width: 70%;
+    transition: border-color 0.3s;
+    box-sizing: border-box;
+}
+input[type="text"]:focus {
+    border-color: #0056b3;
+}
+button {
+    width: 28%;
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+button:hover {
+    background-color: #003875;
+}
+.form-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+.info {
+    display: flex;
+    justify-content: space-around;
+    font-size: 22px;
+    margin-top: 20px;
+}
+.info p {
+    margin: 0;
+}
+.info span {
+    font-weight: 600;
+    color: #0056b3;
+}
+.logout-button {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    width:90px;
+    background-color: #dc3545;
+    padding: 10px 20px;
+    border-radius: 4px;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+.logout-button:hover {
+    background-color: #c82333;
+}
+@media (max-width: 600px) {
+    input[type="text"], button {
+        width: 100%;
+        margin-top: 10px;
+    }
+    .form-container {
+        flex-direction: column;
+    }
+}
+*/
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0; /* Fixed margin for full-width layout */
+    padding: 0; /* Fixed padding to avoid unwanted gaps */
+    background-color: #f0f2f5;
+    color: #333;
+    line-height: 1.6;
+    box-sizing: border-box; /* Makes all elements include padding and border in width/height */
+}
+
+.container {
+    max-width: 90%;
+
+    margin: 40px auto; /* Center the container horizontally with margin auto */
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    position: relative; /* For absolute positioning of the logout button */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Adds a light shadow for depth */
+}
+
+header {
+    text-align: center;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 20px;
+}
+
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+input[type="text"],
+button {
+    padding: 12px;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+    margin-top: 10px;
+    box-sizing: border-box;
+    font-size: 16px; /* Makes text inside inputs and button more readable */
+}
+
+input[type="text"] {
+    width: 70%;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus {
+    border-color: #0056b3;
+}
+
+button {
+    width: 28%;
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #003875;
+}
+
+.form-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    flex-wrap: wrap; /* Ensures the elements can wrap on small screens */
+}
+
+.info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 22px;
+    margin-top: 20px;
+    flex-wrap: wrap; /* Ensures responsive behavior */
+}
+
+.info p {
+    margin: 0;
+}
+
+.info span {
+    font-weight: 600;
+    color: #0056b3;
+}
+
+.logout-button {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    width: 90px;
+    background-color: #dc3545; /* Bootstrap's .btn-danger color */
+    padding: 10px 20px;
+    border-radius: 4px;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.logout-button:hover {
+    background-color: #c82333; /* Darker shade for hover */
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 600px) {
+    input[type="text"], button {
+        width: 100%; /* Ensure inputs and buttons take full width on small screens */
+        margin-top: 10px;
+    }
+
+    .form-container {
+        flex-direction: column; /* Stack the form elements on mobile */
+    }
+
+    .info {
+        font-size: 18px; /* Adjust font size for smaller screens */
+        flex-direction: column; /* Stack the info elements */
+        align-items: center;
+    }
+
+    .logout-button {
+        width: 100%; /* Ensure the logout button is full-width on mobile */
+        position: relative;
+        bottom: 0; /* Adjust position for mobile */
+    }
+}
